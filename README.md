@@ -1,7 +1,22 @@
 # Bistro Boss Restaurant
 
-## Descriptions and Purpose
+###
+
+<h2 align="left">Descriptions and Purpose</h2>
+
+###
 <p>The purpose of this project is to create a collaborative online platform where users can engage in group study activities with their friends. It allows registered users to create, manage, and complete assignments while fostering a sense of teamwork and accountability. Users can also evaluate and grade each other's assignments, promoting peer learning and constructive feedback.</p>
+
+
+###
+
+<h2 align="left">Project Demo</h2>
+
+###
+<div align="center">
+  <img src="https://github.com/towfiqislambd/bistro-boss-restaurant/blob/main/src/assets/bistro-boss-full.png"  />
+</div>
+
 
 ###
 
@@ -18,6 +33,7 @@
 <li>Node JS</li>
 <li>JWT</li>
 </ul>
+
 
 ###
 
@@ -39,7 +55,6 @@
 
 ###
 <ul>
-<li>@tanstack/react-query: ^5.62.11</li>
 <li>axios: ^1.7.9</li>
 <li>firebase: ^11.1.0</li>
 <li>localforage: ^1.10.0</li>
@@ -56,16 +71,27 @@
 <li>swiper": ^11.1.15</li>
 </ul>
 
-<div align="center">
-  <img src="https://github.com/towfiqislambd/bistro-boss-restaurant/blob/main/src/assets/bistro-boss-full.png"  />
-</div>
+
+###
+
+<h2 align="left">Server Side Dependencies</h2>
+
+###
+<ul>
+<li>"cookie-parser: ^1.4.7</li>
+<li>cors: ^2.8.5</li>
+<li>dotenv: ^16.4.7</li>
+<li>express: ^4.21.2</li>
+<li>jsonwebtoken: ^9.0.2</li>
+<li>mongodb: 5.5</li>
+<li>nodemon: ^3.1.9</li>
+</ul>
 
 
-<h3>5.  NPM Packages I have used:</h3>
-<ol>
-<li>React AOS</li>
-<li>Sweet Alert</li>
-<li>React Icons</li>
-<li>Swiper Slider</li>
-<li>React Awesome Reveal</li>
-</ol>
+###
+
+<h2 align="left">Necessary Links</h2>
+
+###
+<h3>Clint Link: <a href="https://online-group-study-theta.firebase.app" target="_blank">https://online-group-study-theta.firebase.app</a></h3>
+<h3>Server Link: <a href="https://online-group-study-theta.firebase.app" target="_blank">https://online-group-study-theta.vercel.app</a></h3>
