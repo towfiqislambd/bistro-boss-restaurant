@@ -56,7 +56,9 @@
 <li>swiper": ^11.1.15</li>
 </ul>
 
-
+<div align="center">
+  <img src="https://github.com/towfiqislambd/bistro-boss-restaurant/blob/main/src/assets/bistro-boss-full.png"  />
+</div>
 
 
 <h3>5.  NPM Packages I have used:</h3>
