@@ -75,7 +75,7 @@ Run `npm install` to install project dependencies.
 
 Create a `.env` file and put your environment variable there. Save the following variable:
 
-<ol type="i">
+<ol type="a">
 <li>NODE_ENV=development</li>
 <li>PORT=Your port</li>
 <li>DATABASE_URL=Your MongoDB Atlas URL</li>
