@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Inter", serif;
+}
+
+.cinzel {
+    font-family: "Cinzel", serif;
+}
+nav ul li a:focus,
+nav ul li a:hover {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+nav ul li a.active {
+    background-color: transparent !important;
+    color: yellow !important;
+}
+.custom-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+aside ul li a.active {
+    color:rgb(148, 26, 26) !important;
+}
+.rating .rr--pointer,
+.rating .rr--box {
+    height: 35px;
+}
+.react-tabs__tab{
+    border: transparent !important;
+    text-transform: uppercase;
+    font-weight:700;
+
+}
+.react-tabs__tab--selected{
+    color: rgb(202 138 4) !important;
+    border-bottom: 2px solid rgb(202 138 4) !important;
+}
+#canv{
+   display: inline-block;
+   margin-top: 4px;
+}
+#customCanvas > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+}
