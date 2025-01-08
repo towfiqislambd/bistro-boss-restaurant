@@ -75,11 +75,14 @@ Run `npm install` to install project dependencies.
 
 Create a `.env` file and put your environment variable there. Save the following variable:
 
-NODE_ENV=development
-PORT=Your port
-DATABASE_URL=Your MongoDB Atlas URL
-JWT_ACCESS_SECRET=Your access token
-ACCESS_TOKEN_EXPIRATION=Your expiration time
+<ol type="i">
+<li>NODE_ENV=development</li>
+<li>PORT=Your port</li>
+<li>DATABASE_URL=Your MongoDB Atlas URL</li>
+<li>JWT_ACCESS_SECRET=Your access token</li>
+<li>ACCESS_TOKEN_EXPIRATION=Your expiration time</li>
+</ol>
+
 
 ## 10. Usage:
 
