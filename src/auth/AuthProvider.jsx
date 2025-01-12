@@ -44,13 +44,13 @@ const AuthProvider = ({ children }) => {
             // JWT Configurations
             if (currentUser?.email) {
                 const user = { email: currentUser?.email }
-                axios.post('http://localhost:5000/login', user, { withCredentials: true })
+                axios.post('https://bistro-boss-restaurant-eight.vercel.app/login', user, { withCredentials: true })
                     .then(() => {
                         setLoading(false)
                     })
             }
             else {
-                axios.post('http://localhost:5000/logout', {}, { withCredentials: true })
+                axios.post('https://bistro-boss-restaurant-eight.vercel.app/logout', {}, { withCredentials: true })
                     .then(() => {
                         setLoading(false)
                     })

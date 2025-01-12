@@ -7,7 +7,7 @@ import { FaBagShopping } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { IoCartSharp } from "react-icons/io5";
 import { MdPermContactCalendar } from "react-icons/md";
-import { FaIdCard } from "react-icons/fa";
+// import { FaIdCard } from "react-icons/fa";
 import useCart from "../../hooks/useCart";
 import useAdmin from "../../hooks/useAdmin";
 
@@ -39,7 +39,9 @@ const Dashboard = () => {
                                 {/* User Dashboard */}
                                 <li><NavLink to='/dashboard/userHome' className="flex gap-2 items-center"><FaHome className="text-xl" /><span>user home</span></NavLink></li>
                                 <li><NavLink to='/dashboard/reservation' className="flex gap-2 items-center"><FaCalendarAlt className="text-xl" /><span>reservation</span></NavLink></li>
-                                <li><NavLink to='/dashboard/paymentHistory' className="flex gap-2 items-center"><FaIdCard className="text-xl" /><span>payment history</span></NavLink></li>
+
+                                {/* <li><NavLink to='/dashboard/paymentHistory' className="flex gap-2 items-center"><FaIdCard className="text-xl" /><span>payment history</span></NavLink></li> */}
+
                                 <li><NavLink to='/dashboard/cart' className="flex gap-2 items-center"><IoCartSharp className="text-xl" /><span>My Cart ({cart.length})</span></NavLink></li>
                                 <li><NavLink to='/dashboard/addReview' className="flex gap-2 items-center"><FaRegListAlt className="text-xl" /><span>add review</span></NavLink></li>
                                 <li><NavLink to='/dashboard/MyBooking' className="flex gap-2 items-center"><MdPermContactCalendar className="text-xl" /><span>my booking</span></NavLink></li>

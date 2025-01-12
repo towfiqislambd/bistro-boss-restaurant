@@ -4,10 +4,12 @@ import { FaUserCircle } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 import { IoCartSharp } from "react-icons/io5";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 const Navbar = () => {
     const navigate = useNavigate();
     const [cart] = useCart();
+    const [isAdmin] = useAdmin();
     const { user, signOutUser } = useAuth();
     const handleSignOut = () => {
         signOutUser()
@@ -38,7 +40,12 @@ const Navbar = () => {
                         <li><NavLink to='/contactUs'>Contact Us</NavLink></li>
                         <li><NavLink to='/ourMenu'>Our Menu</NavLink></li>
                         <li><NavLink to='/ourShop/salad'>Our Shop</NavLink></li>
-                        <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                        {
+                            user && isAdmin && <li><NavLink to='/dashboard/adminHome'>Dashboard</NavLink></li>
+                        }
+                        {
+                            user && !isAdmin && <li><NavLink to='/dashboard/userHome'>Dashboard</NavLink></li>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end items-center gap-3">

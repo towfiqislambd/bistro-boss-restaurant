@@ -11,7 +11,8 @@ const port = process.env.PORT || 5000;
 // All Middlewares
 app.use(cors({
     origin: [
-        'http://localhost:5173'
+        'http://localhost:5173',
+        'https://bistro-boss-restaurants.netlify.app'
     ],
     credentials: true
 }))
@@ -93,6 +94,9 @@ async function run() {
 
         // ******************** Open APIs ************************
 
+        app.get('/', async (req, res) => {
+            res.send('Server is Running')
+        })
         app.get('/all-menu', async (req, res) => {
             const result = await menuCollection.find().toArray();
             res.send(result)
@@ -121,11 +125,11 @@ async function run() {
 
         // ******************** Private APIs ************************
 
-        app.get('/users/admin/:email', verifyToken, async (req, res) => {
+        app.get('/users/admin/:email', async (req, res) => {
             const email = req.params.email;
-            if (email !== req.user.email) {
-                return res.status(403).send({ message: 'Forbidden Access' })
-            }
+            // if (email !== req.user.email) {
+            //     return res.status(403).send({ message: 'Forbidden Access' })
+            // }
             const query = { email };
             const user = await userCollection.findOne(query);
             let admin = false;
@@ -197,7 +201,7 @@ async function run() {
                     recipe: item.recipe,
                     category: item.category,
                     price: item.price,
-                    image:item.image
+                    image: item.image
                 }
             }
             const result = await menuCollection.updateOne(filter, updatedDoc)
@@ -205,10 +209,12 @@ async function run() {
         })
 
 
-        await client.db("admin").command({ ping: 1 });
-        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+        // await client.db("admin").command({ ping: 1 });
+        // console.log("Pinged your deployment. You successfully connected to MongoDB!");
     }
-    finally { }
+    finally {
+        //
+    }
 }
 run().catch(err => console.log(err));
 

@@ -6,8 +6,8 @@ import loaderGif from "../assets/others/loader2.gif";
 const AdminRoutes = ({ children }) => {
     const location = useLocation();
     const { user, loading } = useAuth()
-    const [isAdmin, isPending] = useAdmin()
-    if (loading || isPending) {
+    const [isAdmin, isPending, isLoading, isFetching] = useAdmin()
+    if (loading || isPending || isLoading || isFetching) {
         return <div className="h-screen flex items-center justify-center"><img src={loaderGif} alt="" /></div>
     }
     if (user && isAdmin) {

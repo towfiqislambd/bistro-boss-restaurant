@@ -11,7 +11,7 @@ const UserHome = () => {
     const { user } = useAuth()
     return (
         <section>
-            <h2 className="text-2xl font-semibold">Hi, Welcome Back!</h2>
+            <h2 className="text-2xl font-semibold">Hi {user?.displayName}, Welcome Back!</h2>
             <div className="grid grid-cols-3 gap-5 items-center my-7">
                 <div className="rounded flex justify-center bg-purple-500 py-10 text-white gap-3 items-center">
                     <RiAlignItemLeftFill className="text-5xl" />

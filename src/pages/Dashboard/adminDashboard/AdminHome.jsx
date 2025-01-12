@@ -1,11 +1,13 @@
-import { FaUsers,FaTruck } from "react-icons/fa";
+import { FaUsers, FaTruck } from "react-icons/fa";
 import { BiSolidBank } from "react-icons/bi";
 import { AiFillProduct } from "react-icons/ai";
 import useMenu from "../../../hooks/useMenu";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useAuth from "../../../hooks/useAuth";
 
 const AdminHome = () => {
+    const { user } = useAuth();
     const axiosSecure = useAxiosSecure();
     const { data: users = [] } = useQuery({
         queryKey: ['users'],
@@ -17,7 +19,7 @@ const AdminHome = () => {
     const [menu] = useMenu()
     return (
         <section>
-            <h2 className="text-2xl font-semibold">Hi, Welcome Back!</h2>
+            <h2 className="text-2xl font-semibold">Hi {user?.displayName}, Welcome Back!</h2>
             <div className="grid grid-cols-4 gap-5 items-center my-7">
                 <div className="rounded flex justify-center bg-purple-500 py-10 text-white gap-3 items-center">
                     <BiSolidBank className="text-5xl" />
